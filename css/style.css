@@ -1,0 +1,235 @@
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    padding:0;
+    margin: 0;
+    background-color: rgb(223, 223, 223);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+hr,
+ol,
+dl,
+dt,
+dd{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.top-nav-bar{
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.top-nav-bar .assist{
+    padding: 0 16px;
+}
+.nav-bar .logo{
+    float: left;
+    font: bold 24px/40px 'Arial Black';
+}
+.nav-bar .logo .mr{
+    color: #E6686A;
+    margin-right: 10px;
+}
+.nav-bar .logo .lee{
+    color: #9A9DA2;
+}
+.nav-bar .logo .lee:hover{
+    color: #fff;
+}
+.nav-bar .nav{
+    float: right;
+}
+
+.nav-bar .nav ul li{
+    float: left;
+    margin-right: 30px;
+}
+.nav-bar .nav ul a{
+    color: #9A9DA2;
+    font: bold 12px/40px "微软雅黑";
+    padding-bottom: 8px;
+}
+.nav-bar .nav ul a:hover{
+    color: #fff;
+    border-bottom: 3px solid #E6686A; 
+}
+.banane{
+    height: 600px;
+    background: url(../images/banane.jpg) center center no-repeat;
+    background-size: cover;
+}
+.banane .msk{
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.usercard{
+    /* border: 1px solid red; */
+    max-width: 940px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -340px;
+    box-shadow: 0px 1px 2px 2px rgba(166,166,166,0.58);
+}
+.card{
+    padding: 50px;
+}
+.card .pic{
+    float: left;
+    margin-right: 73px;
+}
+.card .text{
+    float: left;
+    width: 468px;
+}
+.card .text .welcome{
+    position: relative;
+    color: #fff;
+    padding: 4px 16px;
+    background-color: #E6686A;
+}
+.card .text .welcome .sj{
+    display: block;
+    border: 10px solid transparent;
+    width: 0px;
+    border-left-color: #E6686A;
+    border-top-width: 0px;
+    position: absolute;
+    top: 100%;
+    left: 3px;
+}
+.card .text h2{
+    margin-top: 25px;
+}
+.card .text hr{
+    margin: 25px 0;
+    height: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.card .text dl dt,
+.card .text dl dd{
+    float: left;
+    width: 50%;
+    margin: 5px 0;
+}
+.card .text dl dt{
+    font-weight: bold;
+}
+.card .text dl dd{
+    color: #999;
+    font-family: "苹方";
+}
+footer .media{
+    /* border: 1px solid red; */
+    text-align: center;
+    background-color: #E6686A;
+}
+footer .media svg{
+    fill: white;
+    height: 30px;
+    width: 30px; 
+    vertical-align:top;
+}
+footer .media a{
+    display: inline-block;
+    width: 40px;
+    border-radius: 50%; 
+    line-height: 30px;
+    margin: 16px;
+    padding: 5px 0;
+}
+footer .media a:hover{
+    background-color: rgb(199, 85, 87);
+}
+.button-center .button{
+    font-size:14px;
+    color: #333436;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 21px 55px;
+    background-color: #e6e4e4;
+    display: inline-block;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 2px;
+    transition: box-shadow 0.3s;
+}
+.button-center{
+    text-align: center;
+    margin: 35px 0;
+}
+.button-center .button:hover{
+    box-shadow: 0px 4px 13px 0px rgba(34, 34, 34, 0.2);
+}
+.selfIntroduction{
+    max-width: 940px;
+    margin: 0 auto;
+    font: 18px/30px "苹方";
+    /* font-size: 14px;
+    font-family: "苹方"; */
+    text-align: center;
+}
+main .MySkill{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+.MySkill h2{
+    text-align: center;
+    color: #333436;
+    padding-bottom: 38px;
+}
+.MySkill h4{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+    color: #333436;
+}
+.MySkill ol{
+    background-color: #fff;
+    padding: 43px 50px;
+    box-shadow: 0px 4px 13px 0px rgba(34, 34, 34, 0.2);
+}
+.MySkill ol li{
+    float: left;
+    width: 48%;
+    margin: 18px 0;
+    box-sizing: border-box;
+}
+.MySkill ol li:nth-child(even){
+    float: right;
+}
+.progress-bar{
+    height: 5px;
+    border-radius: 2px;
+    background-color: #FAE1E1;
+    margin: 7px 0;
+ /* border: 1px solid red; */
+}
+.progress-bar .progress{
+    height: 100%;
+    background: #E6686A;
+    width: 50%;
+    border-radius: 2px;
+}
