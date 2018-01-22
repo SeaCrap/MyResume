@@ -49,7 +49,7 @@
             <div class="text clearfix">
                 <span class="welcome">
                     Hello
-                    <span class="sj"></span>>
+                    <span class="sj"></span>
                 </span>
                 <h2>李 永 锋</h2>
                 <p>未 来 前 端 开 发 工 程 师</p>
@@ -153,10 +153,47 @@
                 <h4>
                     JavaScript
                 </h4>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
         </ol>
+    </section>
+    <section class="Portfolio">
+        <h2>作 品 集</h2>
+        <nav>
+            <ol class="clearfix">
+                <li id="sy">所有</li>
+                <li id="kj">框架</li>
+                <li id="ys">原生JS&css</li>
+            </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div> 
+        </nav>
+        <script>
+            sy.onclick= function(){
+                portfolioBar.className = 'bar state-1'
+            }
+            kj.onclick= function(){
+                portfolioBar.className = 'bar state-2'
+            }
+            ys.onclick= function(){
+                portfolioBar.className = 'bar state-3'
+            }
+        </script>
+        <div class="productionOne clearfix">
+            <div class="production-l">
+                <img src="../images/1.jpg" alt="左边图片">
+            </div>
+            <div class="production-r">
+                    <div class="production-top-pic">
+                        <img src="../images/2.jpg" alt="上边图片">
+                    </div>
+                    <div class="production-bottom-pic">
+                        <img src="../images/3.jpg" alt="下边图片">
+                    </div>
+            </div>
+        </div>
     </section>
 </main>
 </body>

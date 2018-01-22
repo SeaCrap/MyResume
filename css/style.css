@@ -6,21 +6,10 @@
 body{
     padding:0;
     margin: 0;
+    font-family: "黑体";
     background-color: rgb(223, 223, 223);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-hr,
-ol,
-dl,
-dt,
-dd{
+*{
     margin: 0;
     padding: 0;
 }
@@ -66,7 +55,7 @@ ul,ol{
 }
 .nav-bar .nav ul a{
     color: #9A9DA2;
-    font: bold 12px/40px "微软雅黑";
+    font: 12px/40px "微软雅黑";
     padding-bottom: 8px;
 }
 .nav-bar .nav ul a:hover{
@@ -189,16 +178,18 @@ footer .media a:hover{
     font-family: "苹方"; */
     text-align: center;
 }
-main .MySkill{
+section.MySkill,
+section.Portfolio{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
 }
-.MySkill h2{
+.MySkill h2,
+.Portfolio h2{
     text-align: center;
     color: #333436;
-    padding-bottom: 38px;
+    padding-bottom: 34px;
 }
 .MySkill h4{
     font-size: 14px;
@@ -232,4 +223,64 @@ main .MySkill{
     background: #E6686A;
     width: 50%;
     border-radius: 2px;
+}
+.Portfolio{
+    text-align: center;
+}
+.Portfolio nav{
+    text-align: center;
+    display: inline-block;
+}
+.Portfolio nav ol{
+    /* border: 1px solid red; */
+    display: inline-block;
+    vertical-align: top;
+}
+.Portfolio nav ol li{
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+.Portfolio nav ol li:nth-child(1){
+    margin-left: 0;
+}
+.Portfolio nav .bar{
+    /* border: 1px solid red; */
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-top: 5px;
+    border-radius: 2px;
+    box-shadow: 0px 4px 13px 0px rgba(34, 34, 34, 0.2);
+}
+.Portfolio nav .bar .bar-inner{
+    height: 100%;
+    width: 15%;
+    border-radius: 2px;
+    background-color: #E6686A;
+    transition: all 0.6s;
+}
+.Portfolio nav .bar.bar.stare-1 .bar-inner{
+    margin-left: 0px;
+    width: 50px;
+}
+.Portfolio nav .bar.bar.state-2 .bar-inner{
+    margin-left: 64px;
+    width: 50px;
+}
+.Portfolio nav .bar.bar.state-3 .bar-inner{
+    margin-left: 145px;
+    width: 79px;
+}
+.productionOne{
+    margin-bottom: 100px;
+}
+.productionOne .production-l{
+    float: left;
+}
+.productionOne .production-r{
+    float: right;
+}
+.productionOne .production-r .production-top-pic{
+    margin-bottom: 23px;
 }
