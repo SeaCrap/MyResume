@@ -1,201 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MyResume</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="{{ "../assets/css/style.css.css, " | prepend: site.baseurl }}"> -->
-    <script src="//at.alicdn.com/t/font_549417_lxfywrsl1drvygb9.js"></script>
-    <style type="text/css">
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>MyResume</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<!-- <link rel="stylesheet" href="{{ "../assets/css/style.css.css, " | prepend: site.baseurl }}"> -->
+	<script src="//at.alicdn.com/t/font_547672_4zwatzan8jdzpvi.js"></script>
+	<style type="text/css">
+		.icon {
+		   width: 1em; height: 1em;
+		   vertical-align: -0.15em;
+		   fill: currentColor;
+		   overflow: hidden;
+		}
+	</style>
 </head>
 <body>
 <head>
-    <div class="top-nav-bar clearfix">
-        <div class="assist">
-                <div class="nav-bar">
-                        <a class="logo" href="#">
-                            <span class="mr">Mr</span><span class="lee">Lee</span>
-                            </a>
-                        <div class="nav clearfix">
-                            <ul>
-                                <li><a href="#">关于</a></li>
-                                <li><a href="#">技能</a></li>
-                                <li><a href="#">作品</a></li>
-                                <li><a href="#">博客</a></li>
-                                <li><a href="#">日历</a></li>
-                                <li><a href="#">联系方式</a></li>
-                                <li><a href="#">其他</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    <div class="banane">
-        <div class="msk"></div>
-    </div>
-    <div class="usercard">
-        <div class="card clearfix">
-            <div class="pic">
-                <img src="./images/pic.jpg" width:"299" height:"347" alt="pic">
-            </div>
-            <div class="text clearfix">
-                <span class="welcome">
-                    Hello
-                    <span class="sj"></span>
-                </span>
-                <h2>李 永 锋</h2>
-                <p>未 来 前 端 开 发 工 程 师</p>
-                <hr>
-                <dl>
-                    <dt>年龄</dt>
-                    <dd>99</dd>
-                    <dt>所在城市</dt>
-                    <dd>郑州</dd>
-                    <dt>邮箱</dt>
-                    <dd>liyongfeng@youxiang.com</dd>
-                    <dt>手机</dt>
-                    <dd>88888888888</dd>
-                    <dt>邮箱</dt>
-                    <dd>liyongfeng@youxiang.com</dd>
-                    <dt>手机</dt>
-                    <dd>88888888888</dd>
-                </dl>
-            </div>
-        </div>
-            <footer>
-                <div class="media">
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-qq-copy"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-github"></use>
-                        </svg>                        
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                                <use xlink:href="#icon-github"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                             <use xlink:href="#icon-weibo"></use>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-weixin"></use>
-                        </svg>
-                    </a>
-                </div>
-            </footer>
-    </div>
-    <p class="button-center">
-        <a class="button" href="./2.pdf" download target="_blank">下 载 PDF 简 历</a>
-    </p>
-    <p class="selfIntroduction">
-        李永峰，未来前端工程师，现在在 饥人谷 学习前端课程。<br>
-            技能： 前端开发，Rails 开发，Node.js 开发。
-    </p>
+	<div id="topnavbar" class="top-nav-bar">
+		<div class="assist">
+			<div class="nav-bar">
+				<a class="logo" href="#">
+					<span class="mr">Mr</span><span class="lee">Lee</span>
+				</a>
+			    <div class="nav clearfix">
+				    <ul>
+					    <li><a href="#">关于</a></li>
+					    <li><a href="#">技能</a></li>
+					    <li class="menutigger" >
+					    	<a href="#">作品</a>
+					    	<ul class="menu">
+					    		<li>作品1</li>
+					    		<li>作品2</li>
+					    		<li>作品3</li>
+					    	</ul>
+					    </li>
+					    <li class=”menutigger“ >
+					    	<a href="#">博客</a>
+					    	<ul class="menu">
+					    		<li>博客1</li>
+					    		<li>博客2</li>
+					    		<li>博客3</li>
+					    	</ul>
+					    </li>
+					    <li><a href="#">日历</a></li>
+					    <li><a href="#">联系方式</a></li>
+					    <li><a href="#">其他</a></li>
+				    </ul>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="banane">
+		<div class="msk"></div>
+	</div>
+	<div class="usercard">
+		<div class="card clearfix">
+			<div class="pic">
+				<img src="./images/pic.jpg" width:"299" height:"347" alt="pic">
+			</div>
+			<div class="text clearfix">
+				<span class="welcome">
+					Hello
+					<span class="sj"></span>
+				</span>
+				<h2>某 某 某</h2>
+				<p>未 来 前 端 开 发 工 程 师</p>
+				<hr>
+				<dl>
+					<dt>年龄</dt>
+					<dd>99</dd>
+					<dt>所在城市</dt>
+					<dd>地球</dd>
+					<dt>邮箱</dt>
+					<dd>moumou@youxiang.com</dd>
+					<dt>手机</dt>
+					<dd>88888888888</dd>
+					<dt>邮箱</dt>
+					<dd>moumou@youxiang.com</dd>
+					<dt>手机</dt>
+					<dd>88888888888</dd>
+				</dl>
+			</div>
+		</div>
+			<footer>
+				<div class="media">
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-qq-copy"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-github"></use>
+						</svg>                        
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+								<use xlink:href="#icon-github"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							 <use xlink:href="#icon-weibo"></use>
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-weixin"></use>
+						</svg>
+					</a>
+				</div>
+			</footer>
+	</div>
+	<p class="button-center">
+		<a class="button" href="./2.pdf" download target="_blank">下 载 PDF 简 历</a>
+	</p>
+	<p class="selfIntroduction">
+		某某，未来前端工程师，现在在 饥人谷 学习前端课程。<br>
+			技能： 前端开发，Rails 开发，Node.js 开发。
+	</p>
 </head>
 <main>
-    <section class="MySkill">
-        <h2>技 能</h2>
-        <ol class="clearfix"> 
-            <li>
-                <h4>
-                    HTML 5 & CSS 3 
-                </h4>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-            <li>
-                <h4>
-                    jQuery
-                </h4>
-                <div class="progress-bar">
-                <div class="progress"></div>
-                </div>
-            </li>
-            <li>
-                <h4>
-                    Vue.js
-                </h4>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-            <li>
-                <h4>
-                    React.js
-                </h4>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-            <li>
-                <h4>
-                    Node.js
-                </h4>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-            </li>
-            <li>
-                <h4>
-                    JavaScript
-                </h4>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-        </ol>
-    </section>
-    <section class="Portfolio">
-        <h2>作 品 集</h2>
-        <nav>
-            <ol class="clearfix">
-                <li id="sy">所有</li>
-                <li id="kj">框架</li>
-                <li id="ys">原生JS&css</li>
-            </ol>
-            <div id="portfolioBar" class="bar state-1">
-                <div class="bar-inner"></div>
-            </div> 
-        </nav>
-        <script>
-            sy.onclick= function(){
-                portfolioBar.className = 'bar state-1'
-            }
-            kj.onclick= function(){
-                portfolioBar.className = 'bar state-2'
-            }
-            ys.onclick= function(){
-                portfolioBar.className = 'bar state-3'
-            }
-        </script>
-        <div class="productionOne clearfix">
-            <div class="production-l">
-                <img src="./images/1.jpg" alt="左边图片">
-            </div>
-            <div class="production-r">
-                    <div class="production-top-pic">
-                        <img src="./images/2.jpg" alt="上边图片">
-                    </div>
-                    <div class="production-bottom-pic">
-                        <img src="./images/3.jpg" alt="下边图片">
-                    </div>
-            </div>
-        </div>
-    </section>
+	<section class="MySkill">
+		<h2>技 能</h2>
+		<ol class="clearfix"> 
+			<li>
+				<h4>
+					HTML 5 & CSS 3 
+				</h4>
+				<div class="progress-bar">
+					<div class="progress"></div>
+				</div>
+			<li>
+				<h4>
+					jQuery
+				</h4>
+				<div class="progress-bar">
+				<div class="progress"></div>
+				</div>
+			</li>
+			<li>
+				<h4>
+					Vue.js
+				</h4>
+				<div class="progress-bar">
+					<div class="progress"></div>
+				</div>
+			<li>
+				<h4>
+					React.js
+				</h4>
+				<div class="progress-bar">
+					<div class="progress"></div>
+				</div>
+			<li>
+				<h4>
+					Node.js
+				</h4>
+				<div class="progress-bar">
+					<div class="progress"></div>
+				</div>
+			</li>
+			<li>
+				<h4>
+					JavaScript
+				</h4>
+			<div class="progress-bar">
+				<div class="progress"></div>
+			</div>
+		</ol>
+	</section>
+	<section class="Portfolio">
+		<h2>作 品 集</h2>
+		<nav>
+			<ol class="clearfix">
+				<li id="sy">所有</li>
+				<li id="kj">框架</li>
+				<li id="ys">原生JS&css</li>
+			</ol>
+			<div id="portfolioBar" class="bar state-1">
+				<div class="bar-inner"></div>
+			</div> 
+		</nav>
+		<script>
+			sy.onclick= function(){
+				portfolioBar.className = 'bar state-1'
+			}
+			kj.onclick= function(){
+				portfolioBar.className = 'bar state-2'
+			}
+			ys.onclick= function(){
+				portfolioBar.className = 'bar state-3'
+			}
+		</script>
+		<div class="productionOne clearfix">
+			<div class="production-l">
+				<img src="./images/1.jpg" alt="左边图片">
+			</div>
+			<div class="production-r">
+					<div class="production-top-pic">
+						<img src="./images/2.jpg" alt="上边图片">
+					</div>
+					<div class="production-bottom-pic">
+						<img src="./images/3.jpg" alt="下边图片">
+					</div>
+			</div>
+		</div>
+	</section>
 </main>
+<div class="loadingAnimation active">
+	<div class="loading"></div>	
+</div>
+<script>
+	window.onscroll =function(){
+		if(window.scrollY > 0){
+            topnavbar.classList.add('sticky')
+            
+		}else{
+            topnavbar.classList.remove('sticky')
+		}
+	}
+
+	let liTags = document.getElementsByClassName('menutigger')
+	for (let i = 0; i < liTags.length; i++) {
+		
+		liTags[i].onmouseenter = function(x){
+            let li = x.currentTarget
+            let brother = li.getElementsByTagName('ul')[0]
+            console.log(x.currentTarget)
+            brother.classList.add('active')
+        }    
+        
+        liTags[i].onmouseleave = function(x){
+            let li = x.currentTarget
+            let brother = li.getElementsByTagName('ul')[0]
+            brother.classList.remove('active')
+		}
+	}
+</script>
 </body>
 </html>
