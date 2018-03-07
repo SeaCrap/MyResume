@@ -25,24 +25,24 @@
 				<a class="logo" href="#">
 					<span class="mr">Mr</span><span class="lee">Lee</span>
 				</a>
-			    <div class="nav clearfix">
-				    <ul>
-					    <li><a href="#">关于</a></li>
-					    <li><a href="#">技能</a></li>
-					    <li class="menutigger" >
-					    	<a href="#">作品</a>
+			    <div class="nav">
+				    <ul class="clearfix">
+					    <li><a href="#gy">关于</a></li>
+					    <li><a href="#jn">技能</a></li>
+					    <li>
+					    	<a href="#zp">作品</a>
 					    	<ul class="menu">
-					    		<li>作品1</li>
-					    		<li>作品2</li>
-					    		<li>作品3</li>
+					    		<li><a href="#">作品1</a></li>
+					    		<li><a href="#">作品2</a></li>
+					    		<li><a href="#">作品3</a></li>
 					    	</ul>
 					    </li>
-					    <li class=”menutigger“ >
+					    <li>
 					    	<a href="#">博客</a>
 					    	<ul class="menu">
-					    		<li>博客1</li>
-					    		<li>博客2</li>
-					    		<li>博客3</li>
+					    		<li><a href="#">博客1</a></li>
+					    		<li><a href="#">博客2</a></li>
+					    		<li><a href="#">博客3</a></li>
 					    	</ul>
 					    </li>
 					    <li><a href="#">日历</a></li>
@@ -56,7 +56,7 @@
 	<div class="banane">
 		<div class="msk"></div>
 	</div>
-	<div class="usercard">
+	<div data-x id="gy" class="usercard">
 		<div class="card clearfix">
 			<div class="pic">
 				<img src="./images/pic.jpg" width:"299" height:"347" alt="pic">
@@ -124,7 +124,7 @@
 	</p>
 </head>
 <main>
-	<section class="MySkill">
+	<section data-x id="jn" class="MySkill">
 		<h2>技 能</h2>
 		<ol class="clearfix"> 
 			<li>
@@ -173,7 +173,7 @@
 			</div>
 		</ol>
 	</section>
-	<section class="Portfolio">
+	<section data-x id="zp" class="Portfolio">
 		<h2>作 品 集</h2>
 		<nav>
 			<ol class="clearfix">
@@ -211,35 +211,93 @@
 		</div>
 	</section>
 </main>
-<div class="loadingAnimation active">
-	<div class="loading"></div>	
-</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+
 <script>
-	window.onscroll =function(){
+
+    let bjkd = document.querySelectorAll('[data-x]')
+		for( let i = 0; i < bjkd.length; i++){
+		  bjkd[i].classList.add('offset')
+		}
+    
+    ddd()
+	window.onscroll =function(x){
 		if(window.scrollY > 0){
             topnavbar.classList.add('sticky')
             
 		}else{
             topnavbar.classList.remove('sticky')
 		}
+
+		ddd()
 	}
 
-	let liTags = document.getElementsByClassName('menutigger')
+	function ddd(){
+		let bjkd = document.querySelectorAll('[data-x]')
+		let minIndex = 0
+		for( let i = 1; i < bjkd.length; i++){
+		  if(Math.abs(bjkd[i].offsetTop - window.scrollY) < Math.abs(bjkd[minIndex].offsetTop - window.scrollY)){
+		  	minIndex = i;
+		  }
+		}
+
+        bjkd[minIndex].classList.remove('offset')
+		let id = bjkd[minIndex].id 
+		// console.log(id)
+		let a = document.querySelector('a[href="#'+ id +'"]')
+		let li = a.parentNode
+		let allchildren = li.parentNode.children
+		for(i = 0; i < allchildren.length; i++){
+			allchildren[i].classList.remove('hilight')
+		}
+		// console.log(li)
+		li.classList.add('hilight')
+	}
+
+	let liTags = document.querySelectorAll('.nav > ul>li')
 	for (let i = 0; i < liTags.length; i++) {
 		
 		liTags[i].onmouseenter = function(x){
-            let li = x.currentTarget
-            let brother = li.getElementsByTagName('ul')[0]
-            console.log(x.currentTarget)
-            brother.classList.add('active')
+            x.currentTarget.classList.add('active')
         }    
         
         liTags[i].onmouseleave = function(x){
-            let li = x.currentTarget
-            let brother = li.getElementsByTagName('ul')[0]
-            brother.classList.remove('active')
+            x.currentTarget.classList.remove('active')
+	   }
+	} 
+	let aTags = document.querySelectorAll('.nav > ul>li>a') //通过选择器获得a标签们(aTags)
+    //多久动一次有此函数决定
+	function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+    
+    for(let i=0; i<aTags.length; i++){  //遍历aTags
+		aTags[i].onclick = function(x){ //a标签如果被点击了
+            x.preventDefault() //阻止a默认动作
+            let a = x.currentTarget //获取监听的a标签
+            let href = a.getAttribute('href') //获取监听a标签的href
+            let element = document.querySelector(href) //通过href获取对应的元素
+            let top = element.offsetTop // 获取元素的top
+            
+            let currentTop = window.scrollY //当前页面滚动的top
+            let targetTop = top - 70 // 页面距离目标top 
+            let s =targetTop - currentTop // 目标路程top
+            var t = Math.abs((s/100)*300)  //
+            if(t > 500){t = 500}               
+            var coords = {y: currentTop }; 
+            var tween = new TWEEN.Tween(coords) 
+             .to({y: targetTop} , t)
+             .easing(TWEEN.Easing.Quadratic.InOut)
+             .onUpdate(function() {
+               window.scrollTo(0,coords.y) 
+               // twwen函数会根据起始位置，结束位置和t还有动画方式自动计算Y值
+             })
+             .start(); 
 		}
-	}
+	} 
 </script>
 </body>
 </html>
