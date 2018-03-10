@@ -255,51 +255,56 @@ footer .media a:hover{
     font-family: "苹方"; */
     text-align: center;
 }
-section.MySkill,
+section.skill,
 section.Portfolio{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
 }
-.MySkill h2,
-.Portfolio h2{
+section.skill h2,
+section.Portfolio h2{
     text-align: center;
     color: #333436;
     padding-bottom: 34px;
 }
-.MySkill h4{
+section.skill h4{
     font-size: 14px;
     line-height: 1.1;
     padding-right: 40px;
     color: #333436;
 }
-.MySkill ol{
+section.skill ol{
     background-color: #fff;
     padding: 43px 50px;
     box-shadow: 0px 4px 13px 0px rgba(34, 34, 34, 0.2);
 }
-.MySkill ol li{
+section.skill ol li{
     float: left;
     width: 48%;
     margin: 18px 0;
     box-sizing: border-box;
 }
-.MySkill ol li:nth-child(even){
+section.skill ol li:nth-child(even){
     float: right;
 }
-.progress-bar{
+section.skill .progressBar{
     height: 5px;
     border-radius: 2px;
     background-color: #FAE1E1;
     margin: 7px 0;
- /* border: 1px solid red; */
+    overflow: hidden;
 }
-.progress-bar .progress{
+section.skill .progressBar .progress{
     height: 100%;
     background: #E6686A;
     width: 50%;
     border-radius: 2px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+section.skill.offset .progress{
+    transform: translateX(-100%);
 }
 .Portfolio{
     text-align: center;
@@ -309,7 +314,6 @@ section.Portfolio{
     display: inline-block;
 }
 .Portfolio nav ol{
-    /* border: 1px solid red; */
     display: inline-block;
     vertical-align: top;
 }
@@ -322,7 +326,6 @@ section.Portfolio{
     margin-left: 0;
 }
 .Portfolio nav .bar{
-    /* border: 1px solid red; */
     height: 5px;
     background-color: #fff;
     margin-bottom: 30px;
